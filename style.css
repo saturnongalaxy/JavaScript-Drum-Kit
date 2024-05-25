@@ -1,0 +1,115 @@
+:root {
+  --range-color: #acacac;
+  --yelo: #ffc600;
+  --color-blak: rgb(8, 8, 8);
+  --color-gray: #222;
+}
+
+html {
+  font-size: 10px;
+  background: url("./background.jpg") bottom center;
+  background-size: cover;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: 0.4rem solid var(--color-blak);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem var(--color-blak);
+}
+
+.volume {
+  display: flex;
+  justify-content: center;
+}
+
+#vol {
+  width: 50%;
+  min-width: 200px;
+  margin-top: 5rem;
+}
+
+#currentVolume {
+  font-family: helvetica;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--yelo);
+  /* background-color: var(--range-color); */
+  font-weight: 600;
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: var(--color-gray);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 19px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px var(--range-color);
+  background: var(--range-color);
+  border-radius: 14px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  top: -5px;
+  box-shadow: 0px 0px 0px var(--color-black);
+  border: 0px solid var(--color-black);
+  height: 30px;
+  width: 18px;
+  border-radius: 12px;
+  background: var(--yelo);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: 0.5px;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: var(--yelo);
+  box-shadow: 0 0 1rem var(--yelo);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--yelo);
+}
